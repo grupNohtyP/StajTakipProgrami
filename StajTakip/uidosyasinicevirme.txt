@@ -1,0 +1,13 @@
+C:\Users\asbet\anaconda3\Library\bin\pyuic5.bat -x 10_ogrenciDefter.ui -o ogrenciDefter.py
+
+
+
+not: 
+C:\Users\asbet\anaconda3\Library\bin\pyuic5.bat  => dosua yolu kendi bilgisayarınızdaki 
+pyuic5.bat dosyasının yolu olacak.
+
+sonrasında cmd ekranından ui dosyasının olduğu klasör içerisine girmeniz gerekiyor.
+daha sonra 
+pyuic5.bat dosya konumu -x uidosyaadı.ui -o pydosyaadi.py
+ile çalıştırabilirsiniz. 
+python -m PyQt5.uic.pyuic -x dosyaadi.ui -o dosyaadi.py

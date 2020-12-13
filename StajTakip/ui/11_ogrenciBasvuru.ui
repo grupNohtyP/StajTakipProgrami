@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>401</width>
+    <height>388</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">.QWidget {
+   background-color: beige;
+}
+
+/* Nice Windows-XP-style password character. */
+QLineEdit[echoMode=&quot;2&quot;] {
+    lineedit-password-character: 9679;
+}
+
+/* We provide a min-width and min-height for push buttons
+   so that they look elegant regardless of the width of the text. */
+QPushButton {
+    background-color: palegoldenrod;
+    border-width: 2px;
+    border-color: darkkhaki;
+    border-style: solid;
+    border-radius: 5;
+    padding: 3px;
+    min-width: 9ex;
+    min-height: 2.5ex;
+}
+QDateEdit{
+    border-width: 2px;
+    border-color: darkkhaki;
+    border-style: solid;
+    border-radius: 5;
+    padding: 3px;
+    min-width: 9ex;
+    min-height: 2.5ex;
+}
+
+
+QPushButton:hover {
+   background-color: khaki;
+}
+
+/* Increase the padding, so the text is shifted when the button is
+   pressed. */
+QPushButton:pressed {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: #d0d67c;
+}
+
+QLabel, QAbstractButton {
+    font: bold;
+}
+
+/* Mark mandatory fields with a brownish color. */
+.mandatory {
+    color: brown;
+}
+
+/* Bold text on status bar looks awful. */
+QStatusBar QLabel {
+   font: normal;
+}
+
+QStatusBar::item {
+    border-width: 1;
+    border-color: darkkhaki;
+    border-style: solid;
+    border-radius: 2;
+}
+
+QComboBox, QLineEdit, QSpinBox, QTextEdit {
+    background-color: cornsilk;
+    selection-color: #0a214c; 
+    selection-background-color: #C19A6B;
+	border-width: 2px;
+    border-color: darkkhaki;
+    border-style: solid;
+    border-radius: 5;
+}
+
+QListView {
+   background-color: beige;
+}
+
+QListView {
+    show-decoration-selected: 1;
+}
+
+QListView::item:hover {
+    background-color: wheat;
+}
+
+/* We reserve 1 pixel space in padding. When we get the focus,
+   we kill the padding and enlarge the border. This makes the items
+   glow. */
+QLineEdit, QFrame {
+    border-width: 2px;
+    padding: 1px;
+    border-style: solid;
+    border-color: darkkhaki;
+    border-radius: 5px;
+}
+
+/* As mentioned above, eliminate the padding and increase the border. */
+QLineEdit:focus, QFrame:focus {
+    border-width: 3px;
+    padding: 0px;
+}
+
+/* A QLabel is a QFrame ... */
+QLabel {
+    border: none;
+    padding: 0;
+    background: none;
+	background-color: beige;
+}
+
+
+
+/* A QToolTip is a QLabel ... */
+QToolTip {
+    border: 2px solid darkkhaki;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 200;
+}
+
+/* Nice to have the background color change when hovered. */
+QRadioButton:hover, QCheckBox:hover {
+    background-color: wheat;
+}
+
+/* Force the dialog's buttons to follow the Windows guidelines. */
+QDialogButtonBox {
+    button-layout: 0;
+}
+
+QTabWidget::pane { /* The tab widget frame */
+    border-top: 2px solid #C2C7CB;
+}
+
+QTabWidget::tab-bar {
+    left: 5px; /* move to the right by 5px */
+}
+
+/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */
+QTabBar::tab {
+    background: palegoldenrod(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+   border-width: 2px;
+    border-color: darkkhaki;
+    border-style: solid;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width: 8ex;
+    padding: 2px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background-color: palegoldenrod;
+}
+
+QTabBar::tab:selected {
+	border-width: 2px;
+    border-color: darkkhaki;
+    border-style: solid;
+    border-bottom-color: #darkkhaki; /* same as pane color */
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px; /* make non-selected tabs look smaller */
+}
+
+QFrame{
+	background-color: khaki;
+    border-width: 2px;
+    border-color: darkkhaki;
+    border-style: solid;
+    border-radius: 5;
+	
+}
+
+QPlainTextEdit{
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="stajBasvuru">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>381</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Staj Başvuru İşlemleri</string>
+    </property>
+    <widget class="QLabel" name="lblFirmaAdi">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Firma Adı :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblBitsTarihi">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bitiş Tarihi:</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateBaslamaTarihi_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>90</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::DefaultContextMenu</enum>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+     <property name="date">
+      <date>
+       <year>2020</year>
+       <month>11</month>
+       <day>1</day>
+      </date>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineFirmaAdi">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>60</y>
+       <width>231</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Vestel</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateBitisTarihi">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>120</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::DefaultContextMenu</enum>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+     <property name="date">
+      <date>
+       <year>2020</year>
+       <month>11</month>
+       <day>1</day>
+      </date>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblBaslamaTarihi">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Başlama Tarihi:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblBaslamaTarihi_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alan : </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineFirmaAdi_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>150</y>
+       <width>231</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bilişim Teknolojileri Alanı</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblBaslamaTarihi_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mesaj:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textMesaj">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>180</y>
+       <width>231</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTextEdit
+{
+	background-color: beige;
+    border-width: 2px;
+    padding: 1px;
+    border-style: solid;
+    border-color: darkkhaki;
+    border-radius: 5px;
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnGonder">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>320</y>
+       <width>231</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gönder</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="uyari">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>30</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    border: none;
+    padding: 0;
+    
+	background-color: beige;
+}</string>
+     </property>
+     <property name="text">
+      <string>İlan No:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="uyari_2">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>30</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    border: none;
+    padding: 0;
+    
+	background-color: beige;
+}</string>
+     </property>
+     <property name="text">
+      <string>12345</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnKapat">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kapat</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
